@@ -1,0 +1,420 @@
+/*
+파일명:main.css
+작성날짜:2024.01.11 ~ 2024.01.18
+작성자:양홍섭
+*/
+
+
+/*css 전체*/
+*{
+    list-style: none;
+    text-decoration-line: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'NanumDongHwaDdoBag';
+}
+
+
+/*배경화면*/
+body{   
+    background-color:rgb(255, 252, 252);
+}
+
+
+/*최상위 상단박스*/
+.wrap1{
+    width: 1200px; 
+    margin: 0 auto; 
+    position: relative;    
+}
+
+
+/*최상위 상단바*/
+.animated-text{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    overflow: hidden;   
+    left:600px;
+    width: 1519px;
+    height: 50px;
+    background-color:rgb(255, 218, 198);
+    text-align: center;
+    font-family: 'NanumDongHwaDdoBag';  
+    padding-top: 14px;
+    font-weight: bold;
+    color: #fff5eb;
+    z-index: 200;
+}
+.animated-text a{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+.line{
+  text-transform:uppercase;
+  text-align: center;
+  font-size: 17px;
+  line-height: 60px;
+}
+.line > a{
+    color: white;
+}
+.line:first-child{
+  animation: anim 20s infinite;
+}
+@keyframes anim {
+  0%{
+    margin-top : 0;
+  }
+  16%{
+    margin-top : -60px;
+  }
+  33%{
+    margin-top : -120px;
+  }
+  50%{
+    margin-top : -180px;
+  }
+  66%{
+    margin-top : -120px;
+  }
+  82%{
+    margin-top : -60px;
+  }
+  100%{
+    margin-top : 0;
+  }
+}
+
+
+/*상단바 ~ 중간부분 박스*/
+.wrap2{
+    width: 1200px; 
+    margin: 0 auto; 
+    position: relative;    
+    padding-top: 20px;
+}
+
+
+/*예다움 로고*/
+.h1{
+    font-family: 'NanumGarMaesGeur';
+    font-size: 38px;
+    float: left;
+    position: relative;
+    left:2%; 
+    top: 30px; 
+}
+
+
+/*상단바*/
+.nv1{
+    width: 90%; 
+    height: 40px;
+    float: left; 
+    position: relative;
+    left: 5%; 
+    top: 40px;
+    display: flex;
+    flex-direction: row; 
+    z-index: 20;
+    font-size: 15px;
+}
+.nv1 > a{
+    font-family: 'NanumDongHwaDdoBag';
+    color: black;
+    font-size: 19px;
+    font-weight:bold;
+    margin-left: 20px;
+}
+.nv1 > ul > li a{
+    font-family: 'NanumDongHwaDdoBag';
+    font-size: 18px;
+    color: black;
+    font-weight:normal;
+}
+.nv1 > ul{
+    padding: 15px 20px;
+    line-height: 40px;
+    display: none;
+    position: absolute;
+    margin: 0 50px;
+}
+.nv1 a {
+    padding: 0 10px;
+    z-index: 1000;
+    cursor: pointer;
+    display: inline-block;
+    padding: 3px;
+}
+.nv1 a:hover {
+    background-color:rgb(255, 252, 252);
+}
+.nv1 ul li a:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+}
+
+
+/* 상단 로그인바 */
+.nv2{
+    position: relative;
+    top: 40px;
+    left: -210px;
+    z-index: 100;
+}
+.nv2 ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.nv2 li {
+    float: left;
+    margin: 0 10px; 
+}
+.nv2 ul li a{
+    color: black;
+    font-family: 'NanumDongHwaDdoBag';
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+} 
+.search{
+    width: 21px;
+    height: 21px;
+}
+.shopping{
+    width: 27px;
+    height: 27px;
+}
+.shopping, .search {
+    transition: all 0.2s linear;
+    vertical-align: middle; 
+}
+
+.shopping:hover, .search:hover{
+    transform: scale(1.4);
+}
+
+
+/*  이미지 슬라이드쇼 */
+.cycle-slideshow{
+    position: relative; 
+    z-index: 1;
+    top: 90px; 
+}
+.cycle-slideshow img{
+    width: 1200px;
+    height: 840px; 
+}
+
+
+/*중간 텍스트*/
+.midtext{
+    z-index: 100;
+    width: 400px;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    color:#838383;
+    background-color: rgb(255, 249, 238);
+    border-radius: 80px;
+}
+
+
+/**/
+.product {
+    width: 220px;
+    margin: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-info {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.product-info > .del{
+    margin-left: 7px;
+    font-size: 13px;
+    color: #939393;
+    text-decoration: line-through;
+}
+
+.favorite-button, .cart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 26px;
+    margin: 0 6px;
+    float: right;
+    vertical-align: middle; 
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.cart-button{
+    font-size: 18px;
+}
+
+.favorite-button {
+    color: #ccc; /* Initial color for unfilled heart */
+}
+
+.favorite-filled {
+    color: #e74c3c; /* Color for filled heart */
+    transform: scale(1.2); /* Scale effect for filled heart */
+}
+
+.cart-button {
+    color: #3498db;
+}
+
+.additional-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.shake-animation {
+    animation: shake 1s;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translateX(-5px);
+    }
+
+    20%, 80% {
+        transform: translateX(5px);
+    }
+
+    30%, 50%, 70% {
+        transform: translateX(-10px);
+    }
+
+    40%, 60% {
+        transform: translateX(10px);
+    }
+}
+
+/*View More 박스*/
+.more{
+    margin: 0 auto;
+    text-align: center;
+}
+.view-more-button {
+    background-color: rgb(255, 252, 252);
+    margin: 0 auto;
+    text-align: center;
+    width: 160px;
+    height: 55px;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* 푸터1 */
+.ft1{
+    position: relative;
+    margin: 0 auto;
+    top: 200px;
+    height: 300px;
+    width: 100%;
+    color: #aaaaaa;
+    font-weight: bold;
+}
+.nv3{
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 17px;
+    top: 20px;
+}
+.nv3 > ul{
+    position: relative;
+    margin:0 auto ;
+    margin-bottom: -100px;
+}
+.nv3 ul > li{
+    display: inline-block;
+    margin: 0 60px;
+    text-align: left;
+    vertical-align:top;
+}
+.insta, .face{
+    width: 35px;
+    height: 35px;
+}
+.youtube{
+    width: 40px;
+    height: 45px;
+}
+.face,.youtube{
+    margin-left: 30px;
+}
+.insta,.face,.youtube{
+    vertical-align: middle; 
+}
+
+/*푸터2*/
+.nv4{
+    border-top: 1px solid rgb(162, 162, 162);
+    position: relative;
+    margin: 0 auto;
+    top: 200px;
+    font-size: 13px;
+    padding-bottom: 60px;
+    display: flex;
+    align-items: center;
+    margin-left: -500px;
+}
+.nv4ul{
+    margin:0 auto ;
+    margin-top: 80px;
+    color: #939393;
+    display: flex;
+    align-items: center;
+}
+.nv4ul > .nv4li{
+    margin-top: -20px;
+}
+.nv4ul > .nv4li > a{
+    margin-left: 3%;
+}
+.nv4ul >.nv4li > p{
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 21px;
+}
+.nv4 ul > li{
+    margin-left: 50px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.nv4li > a{
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.logo{
+    margin-top: -20px;
+    margin-left: 210px;
+}
+.logo > img{
+    width:80px;
+    height: 130px;
+}
+
